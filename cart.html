@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+        <style>
+
+            body{
+                margin: 0px;
+            }
+            .header{
+                width: 100%;
+                background-color: black;
+                height: 15vh;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+
+            .title{
+                width: 600px;
+                
+                margin: 0px;
+                color: yellow;
+                font-family: cinzel;
+                font-weight: 600;
+                margin-left: 50px;
+                font-size: 50px;
+            }
+
+            .header-right{
+                
+                width: 1000px;
+                right: 10px;
+            }
+
+
+
+            ul{
+                list-style: none;
+                display: flex;
+                margin-left: 150px;
+                
+            }
+
+            li a{
+                padding-right: 50px;
+                font-size: 38px;
+                text-decoration: none;
+                display: inline;
+                color: yellow;
+                font-family: cinzel;
+            }
+
+            li a:hover{
+                color: rgb(189, 189, 87);
+            }
+
+            .cart-container{
+                margin-top: 50px;
+                width: 50%;
+                /*background-color: rgb(201, 200, 200);*/
+                height: 70vh;
+                position: absolute;
+
+                left: 3%;
+                border-radius: 15px;
+            }
+
+            .cart-heading{
+                display: flex;
+                justify-content: space-around;
+            }
+
+        
+
+            .product-image{
+                width: 50px;
+                border-radius: 10px;
+            }
+
+            th{
+                padding: 15px;
+                color: white;
+                background-color: rgb(0, 0, 0);
+            }
+
+
+            td{
+                text-align: center;
+                font-size: 15px;
+            }
+
+            .remove-button{
+                background-color: red;
+                font-size: 15px;
+                color: white;
+                font-weight: bold;
+                height: 30px;
+                width: 90px;
+                border-radius: 15px;
+                padding: 5px;
+                border: none;
+            }
+
+            .remove-button:hover{
+                background-color: white;
+                color: red;
+                border: 1px solid;
+            }
+
+            .payment-section{
+                /*background-color: rgb(179, 179, 179);*/
+                background-color: rgb(233, 233, 233);
+                margin-top: 50px;
+                width: 35%;
+                position: absolute;
+                right: 5%;
+                border: 1px solid;
+                
+            }
+
+            .payment-title{
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 35px;
+                
+                
+            }
+
+            
+
+            .payment-info{
+                margin-left: 15px;
+                padding: 5px;
+                margin-top: 10px;
+            }
+
+            .payment-headings{
+                color: grey;
+                margin-bottom: 15px;
+                margin-top: 40px;
+            }
+
+            .payment-data{
+                color: black;
+                font-weight: bold;
+            }
+
+            .heading{
+                font-size: 35px;
+                text-align: center;
+                margin-top: 30px;
+                
+            }
+
+            p{
+                margin: 0px;
+            }
+
+            .logo{
+                
+                width: 30px;
+                position: relative;
+                top: 3px;
+            }
+
+            .payment-icons{
+                width: 25px;
+                position: relative;
+                top: 6px;
+            }
+
+            .payment-icons-paypal{
+                width: 25px;
+                position: relative;
+                top: 3px;
+            }
+
+            .checkout-button{
+                height: 50px;
+                width: 200px;
+                border-radius: 30px;
+                background-color: black;
+                color: white;
+                font-weight: bold;
+                border: 0px;
+                display: block;
+                margin: auto;
+                margin-top: 50px;
+                margin-bottom: 15px;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div class="header">
+
+            
+            <p class="title">EBOOK EMPORIUM</p>
+
+            <div class="header-right">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="heading">
+             <b><p> <img  class="logo" src="https://cdn.icon-icons.com/icons2/1369/PNG/512/-shopping-cart_90604.png" > My Cart</p></b>
+        </div>
+
+        <div class="cart-container">
+            <div class="cart">
+                <div class="cart-heading">
+                    <h2>Shopping Cart</h2>
+                    <h2><span class="js-item-number">4</span> items</h2>
+                </div>
+                
+                <table class="table-heading">
+                    <thead>
+                        <tr>
+                            <th width="150">Book Cover</th>
+                            <th width="150">Name</th>
+                            <th width="150">Author</th>
+                            <th width="150">Price</th>
+                            <th width="150">Delete</th>
+                        </tr>
+
+
+                    </thead>
+                    
+                    <tbody class="js-cart-table">
+
+                        <tr class="table-row">
+                            <td style="text-align: center;">
+                                <img src="https://cdn.animenewsnetwork.com/thumbnails/max700x700/cms/news/102888/one-piece-zou-visual.jpeg" class="product-image">
+                            </td>
+        
+                            <td>
+                                One Piece
+                            </td>
+                            <td>
+                                Eichiro Oda
+                            </td>
+                            <td class="js-price-row">
+                                R199.99
+                            </td>
+                            <td>
+                                <button class="remove-button js-remove-button">REMOVE</button>
+                            </td>
+                        </tr>
+    
+                        <tr class="table-row">
+                            <td style="text-align: center;">
+                                <img src="https://preview.redd.it/4p16br7b9dt91.jpg?width=1000&format=pjpg&auto=webp&s=dcf8753815259e30b050a628e745aa3b2de9d797" class="product-image">
+                            </td>
+        
+                            <td>
+                                Blue Lock
+                            </td>
+                            <td>
+                                Muneyuki Kaneshiro
+                            </td>
+                            <td class="js-price-row">
+                                R324.99
+                            </td>
+                            <td>
+                                <button class="remove-button js-remove-button">REMOVE</button>
+                            </td>
+                        </tr>
+    
+                        <tr class="table-row">
+                            <td style="text-align: center;">
+                                <img src="https://resizing.flixster.com/b_Q7SYbYcGcbuSF_Xhp93KyCO3c=/206x305/v2/https://flxt.tmsimg.com/assets/p17127060_b_v8_aa.jpg" class="product-image">
+                            </td>
+        
+                            <td>
+                                Vinland Saga
+                            </td>
+                            <td>
+                                Makoto Yukimura
+                            </td>
+                            <td class="js-price-row">
+                                R499.99
+                            </td>
+                            <td>
+                                <button class="remove-button js-remove-button">REMOVE</button>
+                            </td>
+                        </tr>
+    
+                        <tr class="table-row">
+                            <td style="text-align: center;">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/a/aa/JoJo_Part_1_Phantom_Blood.jpg" class="product-image">
+                            </td>
+        
+                            <td>
+                                JoJo's Bizarre Adventure
+                            </td>
+                            <td>
+                                Hirohiko Araki
+                            </td>
+                            <td class="js-price-row">
+                                R399.99
+                            </td>
+                            <td>
+                                <button class="remove-button js-remove-button">REMOVE</button>
+                            </td>
+                        </tr>
+    
+
+                    </tbody>
+                   
+                    
+                </table>
+
+                <hr>
+                <p style="text-align: right; padding: 15px;">TOTAL | R <span class="js-total-price">1 424.96</span></p>
+
+               
+                
+            </div>
+
+        </div>
+
+        <div class="payment-section">
+
+            <div class="payment-info">
+                <p class="payment-title">Enter your payment details</p>
+                
+                <p class="payment-headings">Payment Method:</p>
+
+                <div style="margin-bottom: 5px;">
+                    <input type="radio" name="answer" checked>
+                    <p style="display: inline-block; font-weight: bold;">
+                        <img src="icons/credit-card-icon-png-4401.png" class="payment-icons">
+                        Credit Card
+                    </p>
+                </div>
+                
+                <div>
+                    <input type="radio" name="answer">
+                    <p style="display: inline-block;  font-weight: bold;">
+                        <img src="icons/paypal icon.png" class="payment-icons-paypal">
+                        PayPal
+                    </p>
+                </div>
+
+                <p class="payment-headings">Name On Card:</p>
+                <p class="payment-data">Walter White</p>
+
+                <p class="payment-headings">Card Number:</p>
+                <p class="payment-data">&#183 &#183 &#183 &#183 &nbsp;
+                                        &#183 &#183 &#183 &#183 &nbsp;
+                                        &#183 &#183 &#183 &#183 &nbsp;
+                                        1265</p>
+
+                <p class="payment-headings">Expiration Date:</p>
+
+                
+                <select name="month" id="month">
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+
+                <select name="year" id="year">
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                    
+                </select>
+                
+
+                <button class="checkout-button">Check Out</button>
+            </div>
+
+            
+            
+            
+           
+        </div>
+
+
+
+        <script src="scripts/cart.js">
+            
+        </script>
+        
+        
+        
+
+    </body>
+</html>
